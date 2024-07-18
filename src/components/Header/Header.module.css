@@ -1,0 +1,321 @@
+.header {
+    margin: 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 80px;
+    font-family: Ancient;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-left: 64px;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+}
+
+.logo>a {
+    margin-left: 28px;
+    display: block;
+    transition: all 0.38s ease;
+    -webkit-text-stroke: 1.2px #000;
+}
+
+.logo>a:focus {
+    border-bottom: 2px solid var(--silver);
+    outline: none;
+}
+
+.logo>a>span:nth-of-type(odd) {
+    position: relative;
+    z-index: 2;
+}
+
+.logo>a>span:nth-child(1) {
+    font-size: 96px;
+}
+
+.sword {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 270px;
+    transition: all 0.4s ease-in;
+    transform-origin: 10% 55%;
+    transform: rotate(-45deg);
+    user-select: none;
+    pointer-events: none;
+    filter: brightness(0.65) sepia(100%) saturate(2);
+}
+
+.menuIcon {
+    font-size: 40px;
+    font-family: Ancient;
+    padding: 4px 8px;
+    letter-spacing: 1.6px;
+    border: 2px solid var(--gold);
+    overflow: hidden;
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 32px;
+    padding: 24px;
+}
+
+.menu>li>button {
+    font-size: 32px;
+    font-family: London;
+    color: var(--gold);
+    background: none;
+    position: relative;
+    border: 1px solid var(--gold);
+    padding: 8px;
+    padding-left: 38px;
+    transition: all 0.4s ease; 
+}
+
+.menu>li:focus {
+    border: 2px solid var(--silver);
+    outline: 3px solid var(--gold);
+}
+
+.menu>li>button i {
+    font-style: normal;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: color 0.1s ease, transform 0.3s ease;
+}
+
+.closeIcon {
+    display: none;
+    width: 24px;
+    height: 24px;
+    font-size: 48px;
+    transform: rotate(45deg);
+    font-family: London;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+@media (hover:hover) {
+    .logo:hover a {
+        color: var(--silver);
+        letter-spacing: 6px;
+        transform: translateX(-104px);
+    }
+    
+    .logo:hover .sword {
+        transform: translateX(-500px) rotate(-45deg);
+    }
+
+    .menu>li>button:hover {
+        cursor: pointer;
+        color: var(--silver);
+        border: 1px solid var(--silver);
+        border-radius: 40px;
+    }
+
+    .menu>li>button:hover i {
+        font-style: normal;
+        transform: rotate(-90deg) translateX(-5%);
+    }
+}
+
+@media (max-width: 1400px) {
+    .menu {
+        gap: 16px;
+        padding: 0px;
+    }
+    
+    .menu>li>button {
+        font-size: 28px;
+        padding-left: 32px;
+        letter-spacing: 0.7px;
+    }
+
+    .logo {
+        font-size: 68px;
+        margin-left: 56px;
+        margin-top: -8px;
+        padding-right: 24px;
+    }
+    
+    .logo>a {
+        margin-left: 28px;
+        -webkit-text-stroke: 1.2px #000;
+    }
+    
+    .logo>a>span:nth-child(1) {
+        font-size: 90px;
+    }
+    .sword {
+        top: 0;
+        left: 0;
+        width: 256px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .menuWrapper:hover .menu {
+        display: flex;
+        visibility: visible;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .menuWrapper {
+        position: relative;
+        z-index: 4;
+    }
+
+    .closeIcon {
+        display: block;
+        z-index: 5;
+    }
+
+    .menu {
+        visibility: hidden;
+        display: none;
+        position: fixed;
+        padding: 14px;
+        gap: 16px;
+        top: 80px;
+        right: 8px;
+        border: 2px solid var(--silver);
+        background: var(--darkGray);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li>button {
+        border: none;
+        letter-spacing: 1px;
+        padding-left: 34px;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu {
+        top: 88px;
+        right: 8px;
+    }
+
+    .menuIcon {
+        font-size: 30px;
+    }
+
+    .logo {
+        font-size: 58px;
+        margin-left: 48px;
+    }
+
+    .logo>a>span:nth-child(1) {
+        font-size: 78px;
+    }
+    .sword {
+        width: 220px;
+    }
+}
+
+@media (max-width: 460px) {
+    .header {
+        margin-right: 8px;
+    }
+
+    .logo {
+        font-size: 56px;
+        margin-left: 36px;
+    }
+
+    .logo>a {
+        margin-left: 20px;
+    }
+
+    .logo>a>span:nth-child(1) {
+        font-size: 70px;
+    }
+
+    .sword {
+        width: 200px;
+    }
+}
+
+@media (max-width: 380px) {
+    .menuIcon {
+        font-size: 24px;
+        padding: 4px 6px;
+    }
+
+    .logo {
+        font-size: 50px;
+        margin-left: 28px;
+    }
+
+    .logo>a {
+        margin-left: 16px;
+    }
+
+    .logo>a>span:nth-child(1) {
+        font-size: 62px;
+    }
+
+    .sword {
+        top: 0px;
+        width: 174px;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        font-size: 42px;
+        margin-left: 28px;
+    }
+
+    .logo>a {
+        margin-left: 16px;
+    }
+
+    .logo>a>span:nth-child(1) {
+        font-size: 56px;
+    }
+
+    .sword {
+        top: 0px;
+        width: 162px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .logo>a {
+        margin-left: 12px;
+    }
+
+    .logo>a>span:nth-child(1) {
+        font-size: 54px;
+    }
+
+    .sword {
+        top: 3px;
+        width: 144px;
+    }
+}

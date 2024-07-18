@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*::after {
+  pointer-events: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 100px;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+  font-family: Seagram;
+  color: var(--gold);
+  cursor: default;
+  background: var(--darkGray);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}

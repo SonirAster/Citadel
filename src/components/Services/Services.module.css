@@ -1,0 +1,287 @@
+.dash {
+    font-style: normal;
+    font-family: London;
+}
+
+.wrapper {
+    padding: 0 80px;
+    position: relative;
+}
+
+.title {
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 64px;
+    font-size: 80px;
+    font-family: Ancient;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-align: center;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+}
+
+.servicesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+}
+
+.servicesListCard,
+.servicesListCardButton {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 280px;
+    padding: 24px;
+    letter-spacing: 1.8px;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.servicesListCardButton h3,
+.cardTitle {
+    font-size: 42px;
+    font-family: Seagram;
+    letter-spacing: 3.5px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    -webkit-text-stroke-color: #000;
+    font-weight: 400;
+}
+
+.servicesListCard {
+    border: 2px solid var(--gold);
+    justify-content: space-between;
+}
+
+.servicesListCard:focus {
+    border: 2px solid var(--silver);
+    outline: 3px solid var(--gold);
+}
+
+.cardTitle {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 1.3em;
+    transition: color 0.1s ease, transform 0.3s ease;
+    -webkit-text-stroke-width: 0.6px;
+}
+
+.cardTitle i {
+    font-style: normal;
+    font-family: Ancient;
+    position: absolute;
+    top: -0.25em;
+    left: 0.2em;
+    font-size: 1.2em;
+    transition: color 0.1s ease, transform 0.3s ease;
+    -webkit-text-stroke-width: 0px ;
+}
+
+.cardDescription {
+    font-size: 28px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.6px;
+    font-weight: 400;
+    transition: 0.5s ease;
+}
+
+.servicesListCardButton {
+    border: 2px solid var(--silver);
+    gap: 4px;
+    align-items: center;
+}
+
+.servicesListCardButton:focus {
+    border: 2px solid var(--silver);
+    outline: none;
+}
+
+.servicesListCardButton h3 {
+    background: none;
+    color: var(--silver);
+    transition: all 0.4s ease;
+    -webkit-text-stroke-width: 1px;
+}
+
+.arrowWrapper {
+    background: none;
+    transition: all 0.3s ease;
+}
+
+.servicesListCardButton span {
+    display: block;
+    margin-top: 20px;
+    transition: inherit;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: var(--silver);
+    font-weight: 400;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: #000;
+}
+
+.servicesListCardButton svg {
+    width: 80px;
+    height: 160px;
+    color: var(--silver);
+    transition: all 0.6s ease;
+    animation-name: Arrow;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    margin-bottom: 20px;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.servicesListCardButton svg:focus {
+    border: 2px solid var(--silver);
+    outline: 3px solid var(--gold);
+}
+
+@keyframes Arrow {
+    0%, 100% {
+        transform: translateY(0);
+        
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+@media (hover:hover) {
+    .cardTitle {
+        -webkit-text-stroke-width: 0.7px;
+    }
+
+    .cardDescription {
+        transform: translateX(calc(100% + 40px));
+    }
+    
+    .servicesListCard:hover i {
+        transform: rotate(-90deg) translateX(-0.1em);
+    }
+
+    .servicesListCard i {
+        -webkit-text-stroke-width: 0.7px;
+    }
+    
+    .servicesListCard:hover {
+        color: var(--silver);
+        border: 2px solid var(--silver);
+        border-radius: 20px;
+    }
+    
+    .servicesListCard:hover .cardTitle {
+        transform: translateX(-0.6em);
+    }
+
+    .servicesListCard:hover .cardDescription {
+        transform: translateX(0);
+        color: var(--silver);
+    }
+
+    .servicesListCardButton:hover {
+        border-radius: 20px;
+    }
+
+    .servicesListCardButton svg:hover {
+        color: var(--gold);
+    }
+
+    .servicesListCardButton:hover .arrowWrapper {
+        transform: translateY(-50%);
+    }
+
+    .servicesListCardButton:hover h3 {
+        transform: translateY(-200%);
+    }
+
+    .servicesListCardButton:hover span {
+        transform: translateY(-64px);
+    }
+
+    .servicesListCard:hover .cardTitle {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000;
+    }
+}
+
+@media (max-width: 1440px) {
+    .wrapper {
+        padding: 0 40px;
+    }
+
+    .title {
+        font-size: 72px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .servicesListCardButton h3,
+    .cardTitle {
+        letter-spacing: 3px;
+        font-size: 38px;
+    }
+    .cardDescription {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .title {
+        font-size: 64px;
+        margin-top: 16px;
+        margin-bottom: 40px;
+    }
+
+    .servicesListCardButton {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1080px) {
+    .servicesListCard,
+    .servicesListCardButton {
+        padding: 16px;
+    }
+    .servicesListCardButton h3,
+    .cardTitle {
+        letter-spacing: 2.6px;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 960px) {
+    .servicesListCard,
+    .servicesListCardButton {
+        width: 100%;
+    }
+
+    .servicesListCardButton svg {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .wrapper {
+        padding: 0 16px;
+    }
+
+    .title {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 44px;
+    }
+}
+

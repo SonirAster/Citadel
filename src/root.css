@@ -1,0 +1,49 @@
+@font-face {
+  font-family: Ancient;
+  src: url('./fonts/Ancient\ Medium.ttf');
+}
+
+@font-face {
+  font-family: London;
+  src: url('./fonts/OldLondon.ttf');
+}
+
+@font-face {
+  font-family: Seagram;
+  src: url('./fonts/Seagram\ tfb.ttf');
+}
+  
+:root {
+  /* background: #444444; */
+  --gold: rgb(243, 197, 48);
+  --Agold: rgb(231, 158, 1);
+  --2darkGray: rgb(51, 50, 50);
+  --darkGray: rgb(92, 84, 84);
+  --1darkGray: rgb(41, 56, 121);
+  --2darkGray: rgb(99, 79, 212);
+  --1darkGray: rgb(106, 56, 121);
+      /* filter: brightness(0.65) sepia(100%) saturate(3); */
+    /* filter: brightness(0.65) sepia(100%) saturate(2) hue-rotate(70deg); */
+    /* filter: brightness(0.65) sepia(100%) saturate(2) hue-rotate(10deg); */
+
+  --silver: #e4d9d9;
+  --pink: rgb(234, 134, 243);
+}
+
+* {
+  z-index: 1;
+  /* -webkit-text-stroke-color: #292828; */
+  /* -webkit-text-stroke-color: rgb(40, 40, 40); */
+}
+
+.bg {
+  position: absolute;
+  top: -70px;
+  right: 0;
+  object-fit: fill;
+  height: 200%;
+  object-position: 15% right;
+  user-select: none;
+  pointer-events: none;
+  /* transform: rotateY(180deg); */
+}
