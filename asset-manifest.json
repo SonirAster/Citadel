@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Citadel/static/css/main.434e9836.css",
-    "main.js": "/Citadel/static/js/main.9eb0dcc3.js",
+    "main.css": "/Citadel/static/css/main.1f3423f4.css",
+    "main.js": "/Citadel/static/js/main.f1a29afa.js",
     "static/js/787.2dd45a62.chunk.js": "/Citadel/static/js/787.2dd45a62.chunk.js",
     "static/media/3.png": "/Citadel/static/media/3.5a563fec668a49bb0ba4.png",
     "static/media/1.png": "/Citadel/static/media/1.b863e8649d38828f7f84.png",
@@ -16,17 +16,16 @@
     "static/media/note1.png": "/Citadel/static/media/note1.7024a9d4b2e6e4f515fc.png",
     "static/media/shield2.png": "/Citadel/static/media/shield2.432c6d04b40d87e69a28.png",
     "static/media/note2.png": "/Citadel/static/media/note2.fb47537044fb85936477.png",
-    "static/media/Ancient Medium.ttf": "/Citadel/static/media/Ancient Medium.a59ed847ec519bfb87a7.ttf",
     "static/media/OldLondon.ttf": "/Citadel/static/media/OldLondon.a67214b49bb04c352ce8.ttf",
     "static/media/sword2.png": "/Citadel/static/media/sword2.d04b2d7bfb6376626d12.png",
     "static/media/Seagram tfb.ttf": "/Citadel/static/media/Seagram tfb.7efd43ff5d6bc4dece9e.ttf",
     "index.html": "/Citadel/index.html",
-    "main.434e9836.css.map": "/Citadel/static/css/main.434e9836.css.map",
-    "main.9eb0dcc3.js.map": "/Citadel/static/js/main.9eb0dcc3.js.map",
+    "main.1f3423f4.css.map": "/Citadel/static/css/main.1f3423f4.css.map",
+    "main.f1a29afa.js.map": "/Citadel/static/js/main.f1a29afa.js.map",
     "787.2dd45a62.chunk.js.map": "/Citadel/static/js/787.2dd45a62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.434e9836.css",
-    "static/js/main.9eb0dcc3.js"
+    "static/css/main.1f3423f4.css",
+    "static/js/main.f1a29afa.js"
   ]
 }
