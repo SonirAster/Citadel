@@ -1,6 +1,6 @@
 @font-face {
   font-family: Ancient;
-  src: url('./fonts/Ancient\ Medium.ttf');
+  src: Franklin;
 }
 
 @font-face {
@@ -15,10 +15,8 @@
   
 :root {
   /* background: #444444; */
-  --gold: rgb(243, 197, 48);
-  --Agold: rgb(231, 158, 1);
-  --2darkGray: rgb(51, 50, 50);
-  --darkGray: rgb(92, 84, 84);
+  --gold: #ff0000;
+  --darkGray: #000;
   --1darkGray: rgb(41, 56, 121);
   --2darkGray: rgb(99, 79, 212);
   --1darkGray: rgb(106, 56, 121);

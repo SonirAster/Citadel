@@ -5,9 +5,10 @@ import sword from '../../assets/weapon/sword2.png';
 const Header = (props) => {
     return (
         <div className={styles.header}>
+            
             <div className={styles.logo}>
-                <a id='headerLogo' href="#head">Citadel</a>
-                <img className={styles.sword} src={sword} alt="" />
+                <a id='headerLogo' href="#head"> Citadel</a>
+                {/* <img className={styles.sword} src={sword} alt="" /> */}
             </div>
             <div className={styles.menuWrapper}>
                 <div className={styles.menuIcon}>Menu</div>

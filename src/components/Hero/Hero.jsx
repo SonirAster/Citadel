@@ -8,7 +8,7 @@ const Hero = (props) => {
         <div className={styles.wrapper}>
             <div className={styles.main}>
                 <div className={styles.frame}>
-                    <img src={photo} alt="Citadel Knight" />
+                    <Arrow />
                     <p> 
                         <span>"We are not modern,</span>
                         <span>we are progressive."</span> 

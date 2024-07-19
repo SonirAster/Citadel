@@ -6,19 +6,29 @@
 }
 
 .logo {
-    font-size: 80px;
-    font-family: Ancient;
+    font-size: 140px;
+    font-family: Seagram;
     letter-spacing: 3px;
     font-weight: 400;
-    margin-left: 64px;
+    /* margin-left: 124px; */
     transition: all 0.3s ease;
     position: relative;
+    margin-top: 24px;
     height: 100%;
+    display: flex;
+
+}
+
+.logo svg {
+    height: 90px;
 }
 
 .logo>a {
     margin-left: 28px;
-    display: block;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 24px;
     transition: all 0.38s ease;
     -webkit-text-stroke: 1.2px #000;
 }
