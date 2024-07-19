@@ -30,6 +30,7 @@
 }
 
 .sword  img {
+    display: none;
     height: 400px;
     position: absolute;
     top: -99px;
@@ -70,7 +71,7 @@
 
 .contacts i {
     font-style: normal;
-    font-family: Ancient;
+    font-family: London;
     margin-top: -2px;
     display: block;
     transition: transform 0.4s ease, color 0.2s ease;

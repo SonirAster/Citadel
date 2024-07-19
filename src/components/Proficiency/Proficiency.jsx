@@ -5,12 +5,10 @@ const Proficiency = () => {
     return (
         <div className={styles.main}>
             <h1 className={styles.title}>
-                {/* <img src={book} className={styles.book} /> */}
                 <p>Your business <br /> idea - our performers</p>
-                {/* <img src={booksPile} className={styles.booksPile} /> */}
             </h1>
             <p className={styles.description}>
-                Strength, Willpower, Intelligence <i>-</i> knights of Citadel can handle a task of any difficulty. 
+                Strength, Willpower, Intelligence <i>-</i> Citadel can handle a task of any difficulty. 
                 We <span>never stop.</span> We always create something new. In the name of Citadel and humanity.
             </p>
             {/* <button className={styles.button}>Explore the best specialists in different spheres.</button>

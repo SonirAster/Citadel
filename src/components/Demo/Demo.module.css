@@ -126,10 +126,12 @@
     padding: 8px 16px;
     border: 2px solid var(--gold);
     transition: all 0.4s ease;
+    white-space: nowrap;
 }
 
 .itemButton i {
     font-style: normal;
+    font-family: London;
     margin-top: -2px;
     display: block;
     transition: color 0.2s ease, transform 0.4s ease;
