@@ -1,5 +1,5 @@
 .header {
-    margin: 8px 24px;
+    margin: 56px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,57 +8,20 @@
 .logo {
     font-size: 140px;
     font-family: Seagram;
-    letter-spacing: 3px;
     font-weight: 400;
-    /* margin-left: 124px; */
-    transition: all 0.3s ease;
+    letter-spacing: 4px;
     position: relative;
-    margin-top: 24px;
     height: 100%;
-    display: flex;
-
+    width: 100%;
 }
 
-.logo svg {
-    height: 90px;
-}
-
-.logo>a {
-    margin-left: 28px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 24px;
-    transition: all 0.38s ease;
-    -webkit-text-stroke: 1.2px #000;
+.logo a {
+    transition: all 0.4s ease;
 }
 
 .logo>a:focus {
     border-bottom: 2px solid var(--silver);
     outline: none;
-}
-
-.logo>a>span:nth-of-type(odd) {
-    position: relative;
-    z-index: 2;
-}
-
-.logo>a>span:nth-child(1) {
-    font-size: 96px;
-}
-
-.sword {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 270px;
-    transition: all 0.4s ease-in;
-    transform-origin: 10% 55%;
-    transform: rotate(-45deg);
-    user-select: none;
-    pointer-events: none;
-    filter: brightness(0.65) sepia(100%) saturate(2);
 }
 
 .menuIcon {
@@ -73,13 +36,13 @@
 
 .menu {
     display: flex;
-    gap: 32px;
-    padding: 24px;
+    gap: 24px;
+    width: 100%;
 }
 
 .menu>li>button {
     font-size: 32px;
-    font-family: London;
+    font-family: Franklin;
     color: var(--gold);
     background: none;
     position: relative;
@@ -87,6 +50,7 @@
     padding: 8px;
     padding-left: 38px;
     transition: all 0.4s ease; 
+    white-space: nowrap;
 }
 
 .menu>li:focus {
@@ -95,6 +59,7 @@
 }
 
 .menu>li>button i {
+    font-family: London;
     font-style: normal;
     position: absolute;
     top: 5px;
@@ -117,12 +82,6 @@
 @media (hover:hover) {
     .logo:hover a {
         color: var(--silver);
-        letter-spacing: 6px;
-        transform: translateX(-104px);
-    }
-    
-    .logo:hover .sword {
-        transform: translateX(-500px) rotate(-45deg);
     }
 
     .menu>li>button:hover {
@@ -133,8 +92,7 @@
     }
 
     .menu>li>button:hover i {
-        font-style: normal;
-        transform: rotate(-90deg) translateX(-5%);
+        transform: rotate(-90deg) translateX(-14%);
     }
 }
 

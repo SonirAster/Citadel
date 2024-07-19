@@ -15,8 +15,6 @@
 }
 
 .title {
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
     color: var(--gold);
     font-size: 80px;
     font-family: Ancient;
@@ -33,8 +31,6 @@
     margin-top: 32px;
     line-height: 1.25;
     letter-spacing: 1px;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
 }
 
 .description span {

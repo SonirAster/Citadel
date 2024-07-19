@@ -1,8 +1,6 @@
 .main {
     padding: 40px 80px 80px 80px;
     text-align: center;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
 }
 
 .title {
@@ -31,18 +29,15 @@
     align-content: center;
     -webkit-text-stroke-width: 0.2px;
     color: var(--silver);
-    outline: 3px solid #000;
-    border: 5px solid #9c9c9c; 
+    border: 3px solid red;
     transition: all 0.4s ease;
-    background-image: url('../../assets/books/scroll4.png');
-    background-size: cover;
 }
 
 .listItemDescription {
     display: block;
     font-size: 48px;
     font-family: London;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 2.5px;
     line-height: 1;
     display: flex;
