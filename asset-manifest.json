@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Citadel/static/css/main.2b0bf350.css",
-    "main.js": "/Citadel/static/js/main.56d1d070.js",
+    "main.css": "/Citadel/static/css/main.209bfd81.css",
+    "main.js": "/Citadel/static/js/main.169a17ee.js",
     "static/js/787.2dd45a62.chunk.js": "/Citadel/static/js/787.2dd45a62.chunk.js",
     "static/media/3.png": "/Citadel/static/media/3.5a563fec668a49bb0ba4.png",
     "static/media/1.png": "/Citadel/static/media/1.b863e8649d38828f7f84.png",
@@ -19,12 +19,12 @@
     "static/media/sword2.png": "/Citadel/static/media/sword2.d04b2d7bfb6376626d12.png",
     "static/media/Seagram tfb.ttf": "/Citadel/static/media/Seagram tfb.7efd43ff5d6bc4dece9e.ttf",
     "index.html": "/Citadel/index.html",
-    "main.2b0bf350.css.map": "/Citadel/static/css/main.2b0bf350.css.map",
-    "main.56d1d070.js.map": "/Citadel/static/js/main.56d1d070.js.map",
+    "main.209bfd81.css.map": "/Citadel/static/css/main.209bfd81.css.map",
+    "main.169a17ee.js.map": "/Citadel/static/js/main.169a17ee.js.map",
     "787.2dd45a62.chunk.js.map": "/Citadel/static/js/787.2dd45a62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b0bf350.css",
-    "static/js/main.56d1d070.js"
+    "static/css/main.209bfd81.css",
+    "static/js/main.169a17ee.js"
   ]
 }
