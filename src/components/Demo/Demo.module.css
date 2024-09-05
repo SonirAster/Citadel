@@ -11,10 +11,82 @@
     z-index: 4;
 }
 
+.demoScreenDescription {
+    --demoPadding: 80px;
+    position: absolute;
+    bottom: 0;
+    left: var(--demoPadding);
+    width: calc(100vw - var(--demoPadding) * 2);
+    transition: all 0.6s ease;
+    transform: translateY(calc(100% - 24px));
+    z-index: 10;
+}
+
+.demoScreenDescriptionInner {
+    font-family: Franklin;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    font-size: 28px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(4px);
+    padding: 0px var(--demoPadding) 140px var(--demoPadding);
+    border-top: 3px solid var(--gold);
+    border-right: 2px solid var(--gold);
+    border-left: 2px solid var(--gold);
+    width: calc(100vw - var(--demoPadding) * 2);
+}
+
+.demoScreenDescription:hover  {
+    transform: translateY(0);
+}
+
+@keyframes ArrowDown {
+    0%,100% {
+        transform: translateY(-12px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ArrowDownMobile {
+    0%,100% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+.demoScreenDescription span svg {
+    height: 160px;
+    transform: rotate(0.7deg);
+    margin-top: -88px;
+    animation-name: ArrowDown;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.demoScreenDescription p {
+    margin-top: 80px;
+    -webkit-text-stroke: 0.4px red;
+    color: #fff;
+}
+
 .demoScreen img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    user-select: none;
+}
+
+.demoScreenDescription a {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    transition: all 0.4s ease;
 }
 
 .demoScreenBtn {
@@ -53,12 +125,11 @@
 }
 
 .title {
-    font-size: 80px;
+    font-size: 88px;
     text-align: center;
-    font-family: Ancient;
+    font-family: London;
     font-weight: 400;
-    -webkit-text-stroke: 1px #000;
-    letter-spacing: 1.6px;
+    letter-spacing: 1px;
     margin: 80px 80px 0px 80px;
 }
 
@@ -74,8 +145,9 @@
 
 .worksList {
     display: flex;
-    justify-content: space-evenly;
-    gap: 24px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px 24px;
     border: 2px solid var(--gold);
     padding: 64px 24px;
 }
@@ -84,9 +156,7 @@
     position: relative;
     overflow: hidden;
     border: 2px solid var(--gold);
-    width: 100%;
-    max-width: 600px;
-    max-height: 480px;
+    max-width: 540px; 
     min-height: 350px;
     text-align: center;
 }
@@ -106,7 +176,7 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-    background: var(--darkGray);
+    background: #000;
     transition: all 0.4s ease;
 }
 
@@ -124,6 +194,7 @@
     gap: 4px;
     cursor: pointer;
     padding: 8px 16px;
+    background: #000;
     border: 2px solid var(--gold);
     transition: all 0.4s ease;
     white-space: nowrap;
@@ -153,10 +224,12 @@
 
     .work:hover .itemButton {
         opacity: 1;
+        transform: translate(-50%, -50%);
     }
 
     .itemButton {
         opacity: 0;
+        transform: translate(-50%, 200px);
     }
 
     .itemButton:hover {
@@ -176,6 +249,11 @@
 
     .demoScreenBtn:active {
         transform: rotate(45deg) scale(0.9);
+    }
+
+    .demoScreenDescription a:hover {
+        color: #fff;
+        letter-spacing: 1.5px;
     }
 
     .arrPrev:hover, 
@@ -249,6 +327,10 @@
     .description {
         margin: 20px 40px 24px 40px;
     }
+    .demoScreenDescription,
+    .demoScreenDescriptionInner {
+        --demoPadding: 24px;
+    }
 }
 
 @media (max-width: 840px) {
@@ -272,6 +354,29 @@
     .itemPhoto {
         width: 100%;
         height: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .demoScreenDescription {
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+    }
+
+    .demoScreenDescription:hover  {
+        transform: translateY(20%);
+    }
+    
+    .demoScreenDescriptionInner {
+        width: 100vw;
+        height: 100%;
+        padding: 0px var(--demoPadding) 40px var(--demoPadding);
+    }
+
+    .demoScreenDescriptionInner p {
+        margin-top: 24px;
     }
 }
 
@@ -307,10 +412,46 @@
     }
 } 
 
+@media(max-height: 600px) {
+    .demoScreenDescription svg {
+       
+        animation-name: ArrowDownMobile;
+    }
 
+    .demoScreenDescriptionInner {
+        height: 75vh;
+        padding: 0 16px;
+   
+    }
 
+    .demoScreenDescription:hover {
+        transform: translateY(0%);
+        height: 75vh;
+    }
 
+    .demoScreenDescription:hover p {
+        overflow-y: scroll;
+        margin-top: -16px;
+        height: 100%;
+    }
 
+    .demoScreenDescription p::-webkit-scrollbar {
+        width: 3px;
+       
+    }
 
+    .demoScreenDescription p::-webkit-scrollbar-track {
+        background: var(--gold);
+        border-radius: 24px;
+    }
 
+    .demoScreenDescription p::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 24px;
+    }
+
+    .demoScreenDescriptionInner {
+        padding-bottom: 80px;
+    }
+}
 

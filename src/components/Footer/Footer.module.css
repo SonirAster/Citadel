@@ -29,16 +29,6 @@
     z-index: 4;
 }
 
-.sword  img {
-    display: none;
-    height: 400px;
-    position: absolute;
-    top: -99px;
-    right: -11px;
-    transform: rotateY(35deg) rotateX(-10deg);
-    z-index: 3;
-}
-
 .info {
     display: flex;
     flex-direction: column;
@@ -48,7 +38,7 @@
 .descr {
     font-family: Ancient;
     font-size: 48px;
-    -webkit-text-stroke: 1px #000;
+    letter-spacing: 0.2px;
     margin-top: -16px;
 }
 
@@ -133,7 +123,6 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    -webkit-text-stroke: 0.8px #000;
     letter-spacing: 0.4px;
 }
 
@@ -151,12 +140,11 @@
 }
 
 button.logo {
+    font-family: Seagram;
     font-size: 64px;
     margin-bottom: 4px;
     letter-spacing: 3px;
     margin-left: -4px;
-    font-weight: 400;
-    -webkit-text-stroke: 1px #000;
 }
 
 @media (hover:hover) {
@@ -260,10 +248,6 @@ button.logo {
     .descr span>i {
         font-size: 40px;
     }
-
-    .sword img {
-        border-bottom: 1px solid var(--gold);
-    }
 }
 
 @media (max-width: 560px) {
@@ -279,11 +263,6 @@ button.logo {
 }
 
 @media (max-width: 360px) {
-    .sword  img {
-        height: 340px;
-        top: -84px;
-    }
-
     .contacts {
         font-size: 22px;
         max-width: 100%;
@@ -297,12 +276,30 @@ button.logo {
     }
 }
 
-@media (max-width: 280px) {
-    .sword  img {
-        height: 300px;
-        top: -74px;
-        right: -8px;
-        border-bottom: none;
+@media (max-width: 340px) {
+    .descr span:nth-child(2){
+        margin-left: 0;
     }
 
+}
+
+@media (max-width: 300px) {
+    .contacts .mail i {
+        display: none;
+    }
+    .descr span:nth-child(2){
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 280px) {
+    .contacts .mail {
+        font-size: 16px;
+    }
+    .contacts .mail span { 
+        font-size: 18px;
+    }
+    .navigation button {
+        text-align: start;
+    }
 }

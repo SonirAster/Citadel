@@ -1,5 +1,5 @@
 .header {
-    margin: 56px 80px;
+    margin: 48px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,17 +10,13 @@
     font-family: Seagram;
     font-weight: 400;
     letter-spacing: 4px;
+    margin-right: 16px;
     position: relative;
     height: 100%;
-    width: 100%;
-}
-
-.logo a {
     transition: all 0.4s ease;
 }
 
-.logo>a:focus {
-    border-bottom: 2px solid var(--silver);
+.logo:focus {
     outline: none;
 }
 
@@ -28,262 +24,201 @@
     font-size: 40px;
     font-family: Ancient;
     padding: 4px 8px;
+    background: none;
     letter-spacing: 1.6px;
     border: 2px solid var(--gold);
+    color: var(--gold);
     overflow: hidden;
     display: none;
 }
 
+.menuCloseIcon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
 .menu {
     display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
     gap: 24px;
     width: 100%;
 }
 
-.menu>li>button {
+.menuItem>button {
     font-size: 32px;
     font-family: Franklin;
+    font-weight: 400;
+    -webkit-text-stroke: none;
     color: var(--gold);
     background: none;
     position: relative;
     border: 1px solid var(--gold);
     padding: 8px;
-    padding-left: 38px;
+    padding-left: 1.45em;
     transition: all 0.4s ease; 
     white-space: nowrap;
 }
 
-.menu>li:focus {
+.menuItem:focus {
     border: 2px solid var(--silver);
     outline: 3px solid var(--gold);
 }
 
-.menu>li>button i {
-    font-family: London;
+.menuItem>button i {
     font-style: normal;
+    font-family: London;
+    font-weight: 400;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 0;
+    left: 0.2em;
+    font-size: 1.15em;
     transition: color 0.1s ease, transform 0.3s ease;
+    -webkit-text-stroke: none;
 }
 
 .closeIcon {
     display: none;
-    width: 24px;
-    height: 24px;
-    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    font-size: 64px;
+    background: none;
+    color: var(--silver);
     transform: rotate(45deg);
     font-family: London;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 16px;
+    right: 16px;
 }
 
 @media (hover:hover) {
-    .logo:hover a {
-        color: var(--silver);
-    }
-
-    .menu>li>button:hover {
+    .menuItem>button:hover {
         cursor: pointer;
         color: var(--silver);
         border: 1px solid var(--silver);
         border-radius: 40px;
+        -webkit-text-stroke: none;
     }
 
-    .menu>li>button:hover i {
+    .menuItem>button:hover i {
         transform: rotate(-90deg) translateX(-14%);
+        -webkit-text-stroke: none;
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
+    .header {
+        margin: 48px 40px;
+    }
+
     .menu {
         gap: 16px;
         padding: 0px;
     }
-    
-    .menu>li>button {
-        font-size: 28px;
-        padding-left: 32px;
-        letter-spacing: 0.7px;
-    }
 
-    .logo {
-        font-size: 68px;
-        margin-left: 56px;
-        margin-top: -8px;
-        padding-right: 24px;
-    }
-    
-    .logo>a {
-        margin-left: 28px;
-        -webkit-text-stroke: 1.2px #000;
-    }
-    
-    .logo>a>span:nth-child(1) {
-        font-size: 90px;
-    }
-    .sword {
-        top: 0;
-        left: 0;
-        width: 256px;
+    .logo { 
+        font-size: 124px;
     }
 }
 
-@media (max-width: 1200px) {
-    .menu {
-        gap: 12px;
+@media (max-width: 1280px) {
+    .logo { 
+        font-size: 108px;
+        align-self: start;
     }
 }
 
 @media (max-width: 1080px) {
-    .menuWrapper:hover .menu {
+    .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1100;
+        width: 100vw;
+        height: 100vh;
+        padding: 14px;
+        gap: 16px;
         display: flex;
-        visibility: visible;
+        background: var(--darkGray);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        transform: translateY(-100%);
+    }
+
+    .menuWrapper {
+        z-index: 4;
+    }
+
+    .menuItem>button {
+        border: none;
+        letter-spacing: 1px;
+        padding-left: 42px;
+        position: relative;
+        z-index: -1;
+    }
+
+    .menuWrapper:hover .menuItem>button {
+        padding-left: 48px;
+        z-index: 3;
     }
 
     .menuIcon {
         display: block;
-    }
-
-    .menuWrapper {
-        position: relative;
-        z-index: 4;
     }
 
     .closeIcon {
         display: block;
         z-index: 5;
     }
+}
 
-    .menu {
-        visibility: hidden;
-        display: none;
-        position: fixed;
-        padding: 14px;
-        gap: 16px;
-        top: 80px;
-        right: 8px;
-        border: 2px solid var(--silver);
-        background: var(--darkGray);
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu li>button {
-        border: none;
-        letter-spacing: 1px;
-        padding-left: 34px;
+@media (max-width: 860px) {
+    .logo {
+        margin-left: 64px;
     }
 }
 
 @media (max-width: 640px) {
-    .menu {
-        top: 88px;
-        right: 8px;
-    }
-
-    .menuIcon {
-        font-size: 30px;
-    }
-
     .logo {
-        font-size: 58px;
+        font-size: 96px;
         margin-left: 48px;
     }
-
-    .logo>a>span:nth-child(1) {
-        font-size: 78px;
-    }
-    .sword {
-        width: 220px;
-    }
 }
 
-@media (max-width: 460px) {
-    .header {
-        margin-right: 8px;
-    }
-
+@media (max-width: 600px) {
     .logo {
-        font-size: 56px;
-        margin-left: 36px;
+        font-size: 80px;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .logo>a {
-        margin-left: 20px;
+    .header {
+        margin: 24px 24px 32px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
-    .logo>a>span:nth-child(1) {
-        font-size: 70px;
-    }
-
-    .sword {
-        width: 200px;
-    }
-}
-
-@media (max-width: 380px) {
     .menuIcon {
-        font-size: 24px;
+        font-size: 32px;
         padding: 4px 6px;
     }
+}
 
-    .logo {
-        font-size: 50px;
-        margin-left: 28px;
-    }
-
-    .logo>a {
-        margin-left: 16px;
-    }
-
-    .logo>a>span:nth-child(1) {
-        font-size: 62px;
-    }
-
-    .sword {
-        top: 0px;
-        width: 174px;
+@media (max-width: 420px) {
+    .menu {
+        overflow-y: scroll;
+        flex-wrap: nowrap;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 300px) {
     .logo {
-        font-size: 42px;
-        margin-left: 28px;
-    }
-
-    .logo>a {
-        margin-left: 16px;
-    }
-
-    .logo>a>span:nth-child(1) {
-        font-size: 56px;
-    }
-
-    .sword {
-        top: 0px;
-        width: 162px;
-    }
-}
-
-@media (max-width: 320px) {
-    .logo {
-        font-size: 40px;
-        margin-left: 20px;
-    }
-
-    .logo>a {
-        margin-left: 12px;
-    }
-
-    .logo>a>span:nth-child(1) {
-        font-size: 54px;
-    }
-
-    .sword {
-        top: 3px;
-        width: 144px;
+        font-size: 64px;
     }
 }

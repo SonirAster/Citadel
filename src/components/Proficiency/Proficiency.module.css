@@ -7,29 +7,26 @@
 
 .title {
     color: var(--gold);
-    font-size: 80px;
+    font-size: 88px;
     font-family: London;
     font-weight: 400;
     letter-spacing: 3px;
     display: flex;
     gap: 16px;
     justify-content: center;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
 }
 
 .description {
     z-index: 3;
     position: relative;
-    font-size: 56px;
-    font-family: London;
+    font-size: 48px;
+    font-family: Ancient;
     color: var(--silver);
     font-weight: 400;
     margin-top: 40px;
     line-height: 1.3;
     letter-spacing: 1px;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 0.6px;
+    -webkit-text-stroke: red 0.4px;
 }
 
 .description i {
@@ -39,6 +36,7 @@
 .description span {
     text-underline-offset: 4px;
     color: var(--gold);
+    font-family: Seagram;
 }
 
 @media (max-width: 1440px) {
@@ -96,3 +94,13 @@
         font-size: 32px;
     }
 }
+
+
+
+
+
+
+
+
+
+

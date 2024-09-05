@@ -1,0 +1,343 @@
+.wrapper {
+    margin: 32px 64px 0 64px;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #000;
+}
+
+.main {
+    height: 670px;
+    display: flex;
+}
+
+@keyframes Arrow {
+    0%, 100% {
+        transform: translateY(0);
+        
+    }
+    50% {
+        transform: translateY(14px);
+    }
+}
+
+.frame {
+    flex: 0 50%;
+    position: relative;
+    transition: all 0.6s ease;
+    /* animation-name: Arrow; */
+    animation-timing-function: ease;
+    animation-duration: 3.5s;
+    margin-bottom: 20px;
+    animation-iteration-count: infinite;
+    /* cursor: pointer; */
+}
+
+.frame p {
+    position: absolute;
+    right: calc(-100%  + 16px);
+    display: flex;
+    gap: 8px;
+    bottom: 8px;
+    font-size: 32px;
+    letter-spacing: 0.6px;
+}
+
+.frame p span:last-child {
+    align-self: end;
+    display: flex;
+    gap: 10px;
+}
+
+.frame p span i {
+    font-style: normal;
+    font-family: Ancient;
+    transform: scale(1.5);
+    margin-top: -4px;
+}
+
+.frame svg {
+    object-fit: contain;
+    object-position: top right;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 350px;
+    transform: rotate(0.5deg);
+    margin-left: -20%;
+    aspect-ratio: 1/1;
+}
+
+.description {
+    margin-top: 16px;
+    flex: 0 50%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.title {
+    color: var(--gold);
+    font-size: 80px;
+    font-family: Ancient;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.button {
+    margin-top: 96px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    transition: all 0.4s ease;
+    background: transparent;
+    font-family: Ancient;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: -0.01em;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    -webkit-text-stroke-width: 0.4px;
+}
+
+.border {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 7px;
+    background: var(--gold);
+}
+
+.button>i {
+    font-style: normal;
+    font-family: London;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    transition: color 0.1s ease, transform 0.3s ease;
+}
+
+.scrollDown {
+    background: none;
+    display: none;
+}
+
+.scrollDown svg {
+    width:  70px;
+    height: 140px;
+    margin-top: 24px;
+    color: var(--gold);
+    transition: all 0.6s ease;
+    animation-name: Arrow;
+    animation-timing-function: ease;
+    animation-duration: 3.5s;
+    margin-bottom: 20px;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes Arrow {
+    0%, 100% {
+        transform: translateY(0);
+        
+    }
+    50% {
+        transform: translateY(14px);
+    }
+}
+
+@media (hover:hover) {
+    .button:hover i {
+        font-style: normal;
+        transform: rotate(-90deg) translate(-6px, 2px);
+    }
+
+    .button:hover {
+        color: var(--silver);
+        border: 2px solid var(--silver);
+        border-radius: 32px;
+    }
+    
+    .scrollDown svg:hover {
+        color: var(--silver);
+    }
+}
+
+@media (max-width: 1560px) {
+    .frame p {
+        right: calc(-100%  + 8px);
+    }
+}
+
+@media (max-width: 1420px) {
+    .wrapper {
+        margin: 32px 40px 0 40px;
+    }
+
+    .description {
+        margin-top: 8px;
+        padding: 0px;
+    }
+
+    .title {
+        font-size: 72px;
+    }
+
+    .button {
+        margin-top: 40px;
+    }
+
+    .frame p {
+        flex-direction: column;
+    }
+
+    .frame p span:first-child {
+        margin-left: -32px;
+    }
+
+    .scrollDown svg {
+        margin-top: 16px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .main {
+        height: 570px;
+    }
+
+    .frame p {
+        right: -40%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .main {
+        height: 690px;
+    }
+
+    .frame img {
+        margin-left: -16px;
+    }
+
+    .frame p {
+        right: -55%;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+
+    .button {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .main {
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+        height: 100%;
+        padding-bottom: 120px;
+    }
+
+    .description {
+        flex: 0 100%;
+    }
+
+    .frame {
+        flex: 0 100%;
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        width: 100%;
+    }
+
+    .frame img {
+        display: none;
+    }
+
+    .frame p {
+        position: static;
+        flex-direction: row;
+        justify-content: center;  
+    }
+
+    .frame p span:first-child {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 920px) {
+    .main {
+        padding-bottom: 140px;
+    }
+
+    .button {
+        margin-bottom: 16px;
+        font-size: 32px;
+    }
+
+    .frame p {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    .title {
+        font-size: 56px;
+    }
+
+    .button {
+        font-size: 28px;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 550px) {
+    .main {
+        padding-bottom: 170px;
+    }
+
+    .wrapper {
+        margin: 8px 16px 0 16px;
+    }
+}
+
+@media (max-width: 560px) {
+    .frame p {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .title {
+        font-size: 40px;
+    }
+
+    .frame p {
+        font-size: 30px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .frame p span:nth-child(2) {
+        margin-left: 32px;
+    }
+
+    .button {
+        margin-top: 16px;
+        padding: 8px 16px;
+        padding-left: 32px;
+    }
+
+    .scrollDown svg {
+        width: 60px;
+        height: 120px;
+    }
+}

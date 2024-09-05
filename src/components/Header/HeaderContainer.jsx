@@ -2,11 +2,16 @@ import React from 'react';
 import Header from './Header';
 
 const HeaderContainer = (props) => {
-    return <Header
-        showAbout={props.handleAboutClick}
-        showContacts={props.handleContactClick}
-        showAdvantages={props.handleAdvantagesClick}
-        showShowcase={props.handleShowcaseClick}
+    let navMenuList = [
+        {title: 'About', ref: props.about}, 
+        {title: 'Our Advantages', ref: props.advantages}, 
+        {title: 'Showcase', ref: props.demo},
+        {title: 'Contact Us', ref: props.contact},
+    ];
+
+    return <Header 
+        navMenuList={navMenuList}
+        handleRef={props.handleRef}
     />;
 }
 

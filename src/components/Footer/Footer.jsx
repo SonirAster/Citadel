@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import sword from '../../assets/weapon/sword3.png';
 import Upwork from '../../assets/icons/UpworkIcon';
 import Insta from '../../assets/icons/Instagram';
 import Youtube from '../../assets/icons/Youtube';
+import {NavLink} from 'react-router-dom';
 
 const Footer = (props) => {
     return (
-        <div className={styles.footer} ref={props.contact}>
+        <div className={styles.footer} ref={props.contactRef}>
             <div className={styles.border}><span></span><span></span><span></span></div>
             <div className={styles.wrapper}>
                 <div className={styles.info}>
@@ -23,18 +23,12 @@ const Footer = (props) => {
                         <a target='_blank' className={styles.upwork} href="https://www.upwork.com/freelancers/~01ad2adb9e9e08a61f"><Upwork /></a>
                     </div>
                 </div>
-
                 <ul className={styles.navigation}>
-                    <li>
-                        <button className={styles.logo} onClick={() => {window.scrollTo(0, 0)}}>Citadel</button>
-                    </li>
-                    <li><button onClick={props.handleServicesClick}>Services</button></li>
-                    <li><button onClick={props.handleAboutClick}>About</button></li>
-                    <li><button onClick={props.handleAdvantagesClick}>Our Advantages</button></li>
+                    <li><NavLink to='/'><button className={styles.logo} onClick={() => {window.scrollTo(0, 0)}}>Citadel</button></NavLink></li>
+                    <li><button onClick={() => {props.handleClick(props.services)}}>Services</button></li>
+                    <li><button onClick={() => {props.handleClick(props.about)}}>About</button></li>
+                    <li><button onClick={() => {props.handleClick(props.advantages)}}>Our Advantages</button></li>
                 </ul>
-            </div>
-            <div className={styles.sword}>
-                <img src={sword} />
             </div>
         </div>
     )

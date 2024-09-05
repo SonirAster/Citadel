@@ -1,0 +1,308 @@
+.footer {
+    font-size: 28px;
+    margin: 40px 80px 80px 80px;
+    position: relative;
+}
+
+.wrapper {
+    padding: 24px 0;
+    padding-right: 88px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.border {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.border>span {
+    display: block;
+    position: relative;
+    min-width: 100%;
+    border-top: 4px solid var(--gold);
+    z-index: 2;
+}
+
+.border>span:nth-child(2) {
+    z-index: 4;
+}
+
+.sword  img {
+    display: none;
+    height: 400px;
+    position: absolute;
+    top: -99px;
+    right: -11px;
+    transform: rotateY(35deg) rotateX(-10deg);
+    z-index: 3;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.descr {
+    font-family: Ancient;
+    font-size: 48px;
+    -webkit-text-stroke: 1px #000;
+    margin-top: -16px;
+}
+
+.descr span>i {
+    font-size: 56px;
+    font-style: normal;
+}
+
+.descr span:nth-child(2){
+    margin-left: 32px;
+    display: block;
+}
+
+.contacts {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+} 
+
+.contacts i {
+    font-style: normal;
+    font-family: London;
+    margin-top: -2px;
+    display: block;
+    transition: transform 0.4s ease, color 0.2s ease;
+}
+
+.contacts .mail,
+.contacts .phone {
+    display: flex;
+    gap: 4px;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+}
+
+.contacts .mail {
+    display: flex;
+    font-style: italic;
+}
+
+.contacts .mail i {
+    margin-top: -6px;
+}
+
+.contacts .mail span {
+    font-family: Franklin;
+    font-weight: 600;
+    font-size: 40px;
+    display: block;
+    margin: -6px -5px 0 -2px;
+}
+
+.contacts .phone {font-family: London;}
+
+.instagram,
+.youtube,
+.upwork {
+    width: 48px;
+    height: 48px;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+}
+
+.instagram svg,
+.youtube svg,
+.upwork svg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: var(--gold);
+    fill: var(--darkGray);
+    transition: all 0.3s ease;
+}
+
+.upwork {
+    width: 45px;
+    height: 45px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    -webkit-text-stroke: 0.8px #000;
+    letter-spacing: 0.4px;
+}
+
+.navigation>li {
+    width: fit-content;
+}
+
+.navigation button {
+    transition: all 0.4s ease;
+    font-size: 40px;
+    background: none;
+    font-family: Ancient;
+    color: var(--gold);
+    cursor: pointer;
+}
+
+button.logo {
+    font-size: 64px;
+    margin-bottom: 4px;
+    letter-spacing: 3px;
+    margin-left: -4px;
+    font-weight: 400;
+    -webkit-text-stroke: 1px #000;
+}
+
+@media (hover:hover) {
+    .contacts .mail:hover,
+    .contacts .phone:hover {
+        color: var(--silver);
+        transform: scale(1.1);
+    }
+
+    .contacts .phone:hover i {
+        transform: rotate(-90deg);
+    }
+
+    .contacts .mail:hover i {
+        transform: rotate(-90deg) translate(-2px, 5px);
+    }
+
+    .navigation>li button:hover {
+        color: var(--silver);
+        transform: scale(1.1);
+    }
+
+    .instagram:hover,
+    .youtube:hover,
+    .upwork:hover {
+        transform: scale(1.1);
+    }
+
+    .youtube:hover svg,
+    .instagram:hover svg,
+    .upwork:hover svg {
+        color: var(--silver);
+    }
+}
+
+@media (max-width: 1280px) {
+    .footer {
+        font-size: 28px;
+        margin: 40px 40px 80px 40px;
+        position: relative;
+    }
+    
+}
+
+@media (max-width: 1080px) {
+    .contacts {
+        flex-wrap: wrap;
+        max-width: 400px;
+        margin-top: 64px;
+    }
+
+    .instagram {
+        margin-left: -8px;
+    }
+}
+
+@media (max-width: 960px) {
+    .navigation button {
+        font-size: 32px;
+    }
+
+    .descr {
+        font-size: 40px;
+        margin-top: 0;
+    }
+    
+    button.logo {
+        font-size: 48px;
+    }
+
+    .descr span>i {
+        font-size: 48px;
+    }
+
+    .wrapper {
+        padding-top: 16px;
+    }
+
+    .contacts {
+        font-size: 24px;
+        max-width: 300px;
+        gap: 24px;
+    }
+
+    .contacts .mail span {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 720px) {
+    .wrapper {
+        flex-direction: column-reverse;
+        gap: 56px;
+    }
+
+    .descr {
+        font-size: 32px;
+        margin-top: 0;
+    }
+
+    .descr span>i {
+        font-size: 40px;
+    }
+
+    .sword img {
+        border-bottom: 1px solid var(--gold);
+    }
+}
+
+@media (max-width: 560px) {
+    .footer {
+        margin: 40px 16px;
+    }
+}
+
+@media (max-width: 460px) {
+    .wrapper {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .sword  img {
+        height: 340px;
+        top: -84px;
+    }
+
+    .contacts {
+        font-size: 22px;
+        max-width: 100%;
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .contacts .mail span {
+        font-size: 26px;
+        margin-top: -2px;
+    }
+}
+
+@media (max-width: 280px) {
+    .sword  img {
+        height: 300px;
+        top: -74px;
+        right: -8px;
+        border-bottom: none;
+    }
+
+}
