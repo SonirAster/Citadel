@@ -32,12 +32,6 @@
     display: none;
 }
 
-.menuCloseIcon {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-}
-
 .menu {
     display: flex;
     justify-content: end;
@@ -210,15 +204,35 @@
     }
 }
 
-@media (max-width: 420px) {
-    .menu {
-        overflow-y: scroll;
-        flex-wrap: nowrap;
+@media (max-width: 480px) {
+    .closeIcon {
+        top: 0px;
+        right: 0px;
+    }
+
+    .menuItem>button {
+        padding: 8px;
+    }
+
+    .menuItem i {
+        display: none;
     }
 }
 
 @media (max-width: 300px) {
     .logo {
         font-size: 64px;
+    }
+}
+
+@media (max-height: 420px) {
+    .menu {
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        justify-content: start;
+    }
+
+    .menu>li:first-child {
+        color: green;       
     }
 }
