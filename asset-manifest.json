@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Citadel/static/css/main.e49a9ef3.css",
+    "main.css": "/Citadel/static/css/main.513acf8a.css",
     "main.js": "/Citadel/static/js/main.1465d601.js",
     "static/js/787.2dd45a62.chunk.js": "/Citadel/static/js/787.2dd45a62.chunk.js",
     "static/media/2.png": "/Citadel/static/media/2.487899caa1b650efdfb7.png",
@@ -15,12 +15,12 @@
     "static/media/OldLondon.ttf": "/Citadel/static/media/OldLondon.a67214b49bb04c352ce8.ttf",
     "static/media/Seagram tfb.ttf": "/Citadel/static/media/Seagram tfb.7efd43ff5d6bc4dece9e.ttf",
     "index.html": "/Citadel/index.html",
-    "main.e49a9ef3.css.map": "/Citadel/static/css/main.e49a9ef3.css.map",
+    "main.513acf8a.css.map": "/Citadel/static/css/main.513acf8a.css.map",
     "main.1465d601.js.map": "/Citadel/static/js/main.1465d601.js.map",
     "787.2dd45a62.chunk.js.map": "/Citadel/static/js/787.2dd45a62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e49a9ef3.css",
+    "static/css/main.513acf8a.css",
     "static/js/main.1465d601.js"
   ]
 }
