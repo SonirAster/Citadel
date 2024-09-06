@@ -1,31 +1,26 @@
 {
   "files": {
-    "main.css": "/Citadel/static/css/main.0dafb334.css",
-    "main.js": "/Citadel/static/js/main.f8a8defe.js",
+    "main.css": "/Citadel/static/css/main.e49a9ef3.css",
+    "main.js": "/Citadel/static/js/main.1465d601.js",
     "static/js/787.2dd45a62.chunk.js": "/Citadel/static/js/787.2dd45a62.chunk.js",
-    "static/media/3.png": "/Citadel/static/media/3.5a563fec668a49bb0ba4.png",
-    "static/media/1.png": "/Citadel/static/media/1.b863e8649d38828f7f84.png",
-    "static/media/Screenshot_5.png": "/Citadel/static/media/Screenshot_5.d8728857b9e22588c1f9.png",
-    "static/media/15.png": "/Citadel/static/media/15.48fb244aa2fa3034be14.png",
-    "static/media/20.png": "/Citadel/static/media/20.abfd680d658917688a67.png",
+    "static/media/2.png": "/Citadel/static/media/2.487899caa1b650efdfb7.png",
+    "static/media/1.png": "/Citadel/static/media/1.ec4c29ec1b93604f2608.png",
+    "static/media/3.png": "/Citadel/static/media/3.68f74d4614077fb7184d.png",
+    "static/media/8.png": "/Citadel/static/media/8.812e49ea0012190cf3d3.png",
+    "static/media/7.png": "/Citadel/static/media/7.6fc9503ebd269c115a5e.png",
+    "static/media/5.png": "/Citadel/static/media/5.e6403978f92526abde95.png",
+    "static/media/4.png": "/Citadel/static/media/4.16f26b43083ad462b795.png",
+    "static/media/6.png": "/Citadel/static/media/6.6e4eaa3ace8def84db6f.png",
     "static/media/coming soon.jpg": "/Citadel/static/media/coming soon.02ce286161ad9e4cb7f7.jpg",
-    "static/media/14.png": "/Citadel/static/media/14.ba5edaed2423c27ed5cc.png",
-    "static/media/s2.png": "/Citadel/static/media/s2.c3b948855d64946f1466.png",
-    "static/media/6.png": "/Citadel/static/media/6.960510ed77047be51a92.png",
-    "static/media/note1.png": "/Citadel/static/media/note1.7024a9d4b2e6e4f515fc.png",
-    "static/media/s1.png": "/Citadel/static/media/s1.16f26b43083ad462b795.png",
-    "static/media/shield2.png": "/Citadel/static/media/shield2.432c6d04b40d87e69a28.png",
-    "static/media/s3.png": "/Citadel/static/media/s3.1551ff72684e0509f690.png",
-    "static/media/note2.png": "/Citadel/static/media/note2.fb47537044fb85936477.png",
     "static/media/OldLondon.ttf": "/Citadel/static/media/OldLondon.a67214b49bb04c352ce8.ttf",
     "static/media/Seagram tfb.ttf": "/Citadel/static/media/Seagram tfb.7efd43ff5d6bc4dece9e.ttf",
     "index.html": "/Citadel/index.html",
-    "main.0dafb334.css.map": "/Citadel/static/css/main.0dafb334.css.map",
-    "main.f8a8defe.js.map": "/Citadel/static/js/main.f8a8defe.js.map",
+    "main.e49a9ef3.css.map": "/Citadel/static/css/main.e49a9ef3.css.map",
+    "main.1465d601.js.map": "/Citadel/static/js/main.1465d601.js.map",
     "787.2dd45a62.chunk.js.map": "/Citadel/static/js/787.2dd45a62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dafb334.css",
-    "static/js/main.f8a8defe.js"
+    "static/css/main.e49a9ef3.css",
+    "static/js/main.1465d601.js"
   ]
 }
