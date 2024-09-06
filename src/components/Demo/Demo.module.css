@@ -91,6 +91,7 @@
 
 .demoScreenBtn {
     position: absolute;
+    z-index: 100;
     top: 0px;
     right: 24px;
     transform: rotate(45deg);

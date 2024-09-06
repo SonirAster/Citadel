@@ -13,22 +13,18 @@ const Demo = (props) => {
         let currentBannerIndex = currentPack.indexOf(file);
         let lastPackItemIndex = currentPack.length - 1;
 
-        if (currentBannerIndex == 0) {
-            setFile(currentPack[lastPackItemIndex])
-        } else {
-            setFile(currentPack[(currentBannerIndex - 1)])
-        }
+        currentBannerIndex == 0 ?
+        setFile(currentPack[lastPackItemIndex]) :
+        setFile(currentPack[(currentBannerIndex - 1)]);
     }
 
     function handleNextClick () {
         let currentBannerIndex = currentPack.indexOf(file);
         let lastPackItemIndex = currentPack.length - 1;
 
-        if (currentBannerIndex == lastPackItemIndex) {
-            setFile(currentPack[0])
-        } else {
-            setFile(currentPack[(currentBannerIndex + 1)])
-        }
+        currentBannerIndex == lastPackItemIndex ? 
+        setFile(currentPack[0]) :
+        setFile(currentPack[(currentBannerIndex + 1)]);
     }
 
     let cases = props.portfolio.map(item => {
@@ -60,16 +56,16 @@ const Demo = (props) => {
                             document.body.style.overflowY = "scroll";
                         }} className={styles.demoScreenBtn}>
                     +</button>
-                    <button className={styles.arrPrev} onClick={handlePrevClick}>{'<'}</button>
+                    <button className={styles.arrPrev} onClick={ handlePrevClick }>{'<'}</button>
                     <img src={file}/>
                     <div className={styles.demoScreenDescription}>
                         <div className={styles.demoScreenDescriptionInner}>
                             <span><Arrow/></span>
                             <p>{descr}</p>
-                            {link?<a href={link}>Visit project</a>:<></>}
+                            { link?<a href={link}>Visit project</a>:<></> }
                         </div>
                     </div>
-                    <button className={styles.arrNext} onClick={handleNextClick}>{'>'}</button>
+                    <button className={styles.arrNext} onClick={ handleNextClick }>{'>'}</button>
                 </div>  
                 : <></>
             }
