@@ -1,10 +1,7 @@
 .main {
     margin: 0 80px;
     padding: 32px;
-    position: relative;
     text-align: center;
-    overflow: hidden;
-    border: 0px solid #000;
 }
 
 .text {
@@ -16,30 +13,33 @@
 
 .title {
     color: var(--gold);
-    font-size: 80px;
-    font-family: Ancient;
+    font-size: 88px;
+    font-family: London;
     font-weight: 400;
     letter-spacing: 3px;
     line-height: 1.1;
 }
 
 .description {
-    font-size: 56px;
+    font-size: 48px;
     font-family: Ancient;
     color: var(--silver);
     font-weight: 400;
     margin-top: 32px;
     line-height: 1.25;
     letter-spacing: 1px;
+    -webkit-text-stroke: red 0.4px;
 }
 
 .description span {
     color: var(--gold);
+    font-family: Seagram;
 }
 
 .description i {
     font-style: normal;
     color: var(--gold);
+    font-family: Seagram;
 }
 
 .marker {

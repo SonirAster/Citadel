@@ -1,33 +1,45 @@
 import React, { useState } from 'react';
 import styles from './Demo.module.css';
-import banners from '../../works';
 import DemoItem from './DemoItem';
+import Arrow from '../../assets/arrow';
 
 const Demo = (props) => {
     const [file, setFile] = useState(null);
     const [currentPack, setCurrentPack] = useState(null);
+    const [descr, setDescr] = useState(null);
+    const [link, setLink] = useState(null);
 
     function handlePrevClick () {
         let currentBannerIndex = currentPack.indexOf(file);
         let lastPackItemIndex = currentPack.length - 1;
 
-        if (currentBannerIndex == 0) {
-            setFile(currentPack[lastPackItemIndex])
-        } else {
-            setFile(currentPack[(currentBannerIndex - 1)])
-        }
+        currentBannerIndex == 0 ?
+        setFile(currentPack[lastPackItemIndex]) :
+        setFile(currentPack[(currentBannerIndex - 1)]);
     }
 
     function handleNextClick () {
         let currentBannerIndex = currentPack.indexOf(file);
         let lastPackItemIndex = currentPack.length - 1;
 
-        if (currentBannerIndex == lastPackItemIndex) {
-            setFile(currentPack[0])
-        } else {
-            setFile(currentPack[(currentBannerIndex + 1)])
-        }
+        currentBannerIndex == lastPackItemIndex ? 
+        setFile(currentPack[0]) :
+        setFile(currentPack[(currentBannerIndex + 1)]);
     }
+
+    let cases = props.portfolio.map(item => {
+        return <DemoItem
+            photo={item.images[0]}
+            title={item.title}
+            handleClick={() => {
+                setFile(item.images[0]);
+                setDescr(item.description);
+                setLink(item.link ? item.link : null);
+                setCurrentPack(item.images);
+                document.body.style.overflowY = "hidden";
+            }}
+        />
+    })
 
     return (
         <div className={styles.main} ref={props.demoRef}>
@@ -36,18 +48,7 @@ const Demo = (props) => {
                 You will see here few of our works where it will be easy to notice golden ratio principle and 
                 harmony of color and shape beautifully expressed in code.
             </p>
-            <div className={styles.worksList}>
-                {banners.map((item,index) => {
-                    return <DemoItem 
-                        photo={item[0]} 
-                        handleClick={() => {
-                            setFile(item[0]);
-                            setCurrentPack(item);
-                            document.body.style.overflowY = "hidden";
-                        }}
-                    />
-                })}
-            </div>
+            <div className={styles.worksList}>{cases}</div>
             {file? 
                 <div className={styles.demoScreen}>
                     <button onClick={() => {
@@ -55,16 +56,16 @@ const Demo = (props) => {
                             document.body.style.overflowY = "scroll";
                         }} className={styles.demoScreenBtn}>
                     +</button>
-                    <button
-                        className={styles.arrPrev}
-                        onClick={handlePrevClick}
-                    >{'<'}</button>
-
+                    <button className={styles.arrPrev} onClick={ handlePrevClick }>{'<'}</button>
                     <img src={file}/>
-                    <button 
-                        className={styles.arrNext}
-                        onClick={handleNextClick}
-                    >{'>'}</button>
+                    <div className={styles.demoScreenDescription}>
+                        <div className={styles.demoScreenDescriptionInner}>
+                            <span><Arrow/></span>
+                            <p>{descr}</p>
+                            { link?<a href={link}>Visit project</a>:<></> }
+                        </div>
+                    </div>
+                    <button className={styles.arrNext} onClick={ handleNextClick }>{'>'}</button>
                 </div>  
                 : <></>
             }
@@ -73,3 +74,4 @@ const Demo = (props) => {
 }
 
 export default Demo;
+

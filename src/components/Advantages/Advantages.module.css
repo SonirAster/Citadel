@@ -7,7 +7,7 @@
     margin-top: 24px;
     margin-bottom: 56px;
     font-family: Ancient;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 3.4px;
     font-size: 80px;
     line-height: 1.1;
@@ -27,8 +27,7 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-    -webkit-text-stroke-width: 0.2px;
-    color: var(--silver);
+    -webkit-text-stroke: red 0.4px;    color: var(--silver);
     border: 3px solid red;
     transition: all 0.4s ease;
 }
@@ -85,13 +84,15 @@
     }
 }
 
+@media(max-width: 940px) {
+    .title {
+        font-size: 56px;
+    }
+}
+
 @media (max-width: 560px) {
     .main {
         margin: 0 16px;
-    }
-
-    .title {
-        font-size: 56px;
     }
 
     .listItemDescription {
@@ -110,11 +111,20 @@
         padding: 0;
     }
 
-    .title {
-        font-size: 44px;
-    }
-
     .listItemDescription {
         font-size: 32px;
     }
 }
+
+@media (max-width: 420px) {
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 300px) {
+    .title {
+        font-size: 32px;
+    }
+}
+

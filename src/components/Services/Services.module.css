@@ -14,12 +14,10 @@
     margin-bottom: 64px;
     font-size: 80px;
     font-family: Ancient;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 3px;
     line-height: 1.1;
     text-align: center;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
 }
 
 .servicesList {
@@ -86,10 +84,9 @@
 
 .cardDescription {
     font-size: 28px;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 0.6px;
+    font-family: Ancient;
     font-weight: 400;
-    transition: 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .servicesListCardButton {
@@ -123,8 +120,6 @@
     letter-spacing: 1px;
     color: var(--silver);
     font-weight: 400;
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: #000;
 }
 
 .servicesListCardButton svg {
@@ -162,6 +157,10 @@
 
     .cardDescription {
         transform: translateX(calc(100% + 40px));
+    }
+
+    .cardDescription:hover {
+        -webkit-text-stroke: red 0.4px;
     }
     
     .servicesListCard:hover i {
@@ -269,19 +268,58 @@
     }
 }
 
+@media(max-width: 940px) {
+    .title {
+        font-size: 56px;
+        white-space: wrap;
+    }
+}
+
 @media (max-width: 560px) {
     .wrapper {
         padding: 0 16px;
     }
 
-    .title {
-        font-size: 56px;
+    .servicesListCard {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        min-width: 100%;
+    }
+    .servicesListCardButton {
+        min-width: 100%;
     }
 }
+
+@media (max-width: 420px) {
+    .title {
+        font-size: 40px;
+    }
+    .servicesList {
+        row-gap: 40px;
+    }
+}
+
+
 
 @media (max-width: 360px) {
-    .title {
-        font-size: 44px;
+    .servicesListCard i {display: none;}
+    .cardTitle {
+        padding-left: 0;
+        text-align: center;
+        font-size: 32px;
     }
 }
 
+
+
+@media (max-width: 300px) {
+    .title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 280px) {
+    .cardTitle {
+        font-size: 28px;
+    }
+}

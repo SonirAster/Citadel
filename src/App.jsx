@@ -1,16 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './components/Pages/MainPage/MainPage';
 import HeaderContainer from './components/Header/HeaderContainer';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Proficiency from './components/Proficiency/Proficiency';
-import Services from './components/Services/Services';
-import Advantages from './components/Advantages/Advantages';
-import ContactFormContainer from './components/ContactForm/ContactFormContainer';
 import Footer from './components/Footer/Footer';
-import Demo from './components/Demo/Demo';
-import { useRef } from 'react';
+import PortfolioCasePage from './components/Pages/PortfolioPage/PortfolioPage';
 
-const App = () => {
+const App = (props) => {
     const services = useRef(null);
     const about = useRef(null);
     const advantages = useRef(null);
@@ -25,30 +20,25 @@ const App = () => {
     }
 
     return (
-        <div id='head'>
-            <HeaderContainer 
-                handleAboutClick={() => {scrollToSection(about)}}
-                handleContactClick={() => {scrollToSection(contact)}}
-                handleAdvantagesClick={() => {scrollToSection(advantages)}}
-                handleShowcaseClick={() => {scrollToSection(demo)}}
+        <BrowserRouter>
+            <HeaderContainer about={about} contact={contact} 
+                advantages={advantages} demo={demo} 
+                handleRef={scrollToSection}
             />
-            <Hero 
-                handleClick={() => {scrollToSection(services)}} 
-                showAbout={() => {scrollToSection(about)}}
+            <MainPage
+                scrollToSection={scrollToSection}
+                state={props.state}
+                services={services}
+                about={about} advantages={advantages}
+                demo={demo} contact={contact}
             />
-            <About aboutRef={about} />
-            <Advantages advantagesRef={advantages} />
-            <Proficiency /> 
-            <Services handleClick={() => {scrollToSection(demo)}} servicesRef={services} />
-            <Demo demoRef={demo} />
-            <Footer
-                contact={contact}
-                handleAboutClick={() => { scrollToSection(about) }}
-                handleAdvantagesClick={() => { scrollToSection(advantages) }}
-                handleServicesClick={() => { scrollToSection(services) }}
-            /> 
+
+            <Footer contactRef={contact} services={services} 
+                about={about} advantages={advantages} 
+                handleClick={scrollToSection}
+            />
             {/* <ContactFormContainer /> */}
-        </div>
+        </BrowserRouter>
     )
 }
 
