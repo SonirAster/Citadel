@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Citadel/static/css/main.75309e86.css",
-    "main.js": "/Citadel/static/js/main.1465d601.js",
+    "main.css": "/Citadel/static/css/main.06f845e5.css",
+    "main.js": "/Citadel/static/js/main.a52f500b.js",
     "static/js/787.2dd45a62.chunk.js": "/Citadel/static/js/787.2dd45a62.chunk.js",
     "static/media/2.png": "/Citadel/static/media/2.487899caa1b650efdfb7.png",
     "static/media/1.png": "/Citadel/static/media/1.ec4c29ec1b93604f2608.png",
@@ -12,16 +12,23 @@
     "static/media/4.png": "/Citadel/static/media/4.16f26b43083ad462b795.png",
     "static/media/6.png": "/Citadel/static/media/6.6e4eaa3ace8def84db6f.png",
     "static/media/coming soon.jpg": "/Citadel/static/media/coming soon.02ce286161ad9e4cb7f7.jpg",
-    "static/media/abstract-1891289_1920.jpg": "/Citadel/static/media/abstract-1891289_1920.bca5b2297bbca4618a00.jpg",
+    "static/media/map page.png": "/Citadel/static/media/map page.96f2037fd61c32bda804.png",
+    "static/media/name.png": "/Citadel/static/media/name.c33dcbbd040c6ad3de04.png",
     "static/media/OldLondon.ttf": "/Citadel/static/media/OldLondon.a67214b49bb04c352ce8.ttf",
+    "static/media/s3.png": "/Citadel/static/media/s3.4821e4a2d221fb059dca.png",
+    "static/media/s2.png": "/Citadel/static/media/s2.2ac825ee00c6ff49eb02.png",
     "static/media/Seagram tfb.ttf": "/Citadel/static/media/Seagram tfb.7efd43ff5d6bc4dece9e.ttf",
+    "static/media/s1.png": "/Citadel/static/media/s1.cbc9a1282d0e10169073.png",
+    "static/media/s4.png": "/Citadel/static/media/s4.baaaadd14efea5ae70a4.png",
+    "static/media/s5.png": "/Citadel/static/media/s5.8b572d23f91679b74759.png",
+    "static/media/page one.png": "/Citadel/static/media/page one.24d4d86806a4eda492a4.png",
     "index.html": "/Citadel/index.html",
-    "main.75309e86.css.map": "/Citadel/static/css/main.75309e86.css.map",
-    "main.1465d601.js.map": "/Citadel/static/js/main.1465d601.js.map",
+    "main.06f845e5.css.map": "/Citadel/static/css/main.06f845e5.css.map",
+    "main.a52f500b.js.map": "/Citadel/static/js/main.a52f500b.js.map",
     "787.2dd45a62.chunk.js.map": "/Citadel/static/js/787.2dd45a62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75309e86.css",
-    "static/js/main.1465d601.js"
+    "static/css/main.06f845e5.css",
+    "static/js/main.a52f500b.js"
   ]
 }
