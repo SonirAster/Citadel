@@ -34,15 +34,14 @@
 .frameArrow {
     margin-top: 16px;
     transform: rotate(0.5deg);
-}
-
-.frameArrow svg {
-    height: 100%;
-    width: 100%;
-    animation-name: ArrowDown;
-    animation-timing-function: linear;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
+    svg {
+        height: 100%;
+        width: 100%;
+        animation-name: ArrowDown;
+        animation-timing-function: linear;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
 }
 
 .description {
@@ -68,13 +67,12 @@
     letter-spacing: 0.6px;
     line-height: 1.2;
     text-align: end;
-}
-
-.quote i {
-    font-style: normal;
-    font-family: Ancient;
-    transform: scale(1.5);
-    margin-top: -4px;
+    i {
+        font-style: normal;
+        font-family: Ancient;
+        transform: scale(1.5);
+        margin-top: -4px;
+    }
 }
 
 .title {
@@ -215,7 +213,7 @@
 
     .frameArrow {
         position: absolute;
-        top: 6px;
+        top: -16px;
         left: 14px;
     }
 
@@ -227,7 +225,7 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
     .frameArrow svg {
         height: 140px;
     }

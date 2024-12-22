@@ -24,6 +24,10 @@ body {
   color: var(--gold);
   cursor: default;
   background: var(--darkGray);
+  /* background-image: url('./assets/abstract-1891289_1920.jpg'); */
+  background-position: center;
+  background-size: fill;
+  background-attachment: fixed;
 }
 
 li {
